@@ -1,0 +1,21 @@
+#list-tag {
+  color: white;
+  background-color: blue;
+}
+
+h2 {
+  color: red;
+  background: yellow;
+  font-size: 5em;
+}
+
+.fg-blue {
+  color: blue;
+  background-color: yellow;
+}
+
+ul > li {
+  background-color: green;
+  color: white;
+}
+
