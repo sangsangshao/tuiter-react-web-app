@@ -622,9 +622,9 @@ p#id-selector-2 {
 }
 
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 300px) {
   body {
-    background-color: yellow;
+    background-color: lightskyblue;
   }
   .my-own-media-query {
     background-color: red;
@@ -633,9 +633,9 @@ p#id-selector-2 {
     border: solid 10px green;
   }
 }
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 300px) and (max-width: 600px) {
   body {
-    background-color: blue;
+    background-color: lightgreen;
     color: white;
   }
   .my-own-media-query {
@@ -645,9 +645,9 @@ p#id-selector-2 {
     border: solid 20px blue;
   }
 }
-@media (min-width: 1200px) and (max-width: 1800px) {
+@media (min-width: 600px) and (max-width: 900px) {
   body {
-    background-color: red;
+    background-color: lightpink;
     color: white;
   }
   .my-own-media-query {
