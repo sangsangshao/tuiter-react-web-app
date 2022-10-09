@@ -1,0 +1,86 @@
+.wd-dark-background {
+  background-color: black;
+}
+
+.list-group .list-group-item{
+  background-color: black;
+  color: white;
+}
+
+.wd-border-left-right {
+  border-left: rgb(47, 51, 54) 1px solid;
+  border-right: rgb(47, 51, 54) 1px solid;
+}
+
+.wd-border-top-bottom {
+  /*border-top: rgb(47, 51, 54) 1px solid;*/
+  border-bottom: rgb(47, 51, 54) 1px solid;
+}
+
+.list-group .active {
+  border: none;
+  font-weight: bold;
+}
+
+.nav {
+  border: none;
+}
+
+.nav .nav-link {
+  background-color: black;
+  color: grey;
+}
+
+.nav-item .wd-highlight {
+  color: lightgray;
+  font-weight: bold;
+  border-bottom: rgb(29,161,242) 5px solid;
+  margin-top: 6px;
+  margin-left: 3px;
+  padding: 0px;
+}
+
+.wd-search-tuiter {
+  top: 10px;
+  left: 20px;
+}
+
+.wd-darkgrey {
+  background-color: darkgray;
+}
+
+.wd-bold-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: darkgray;
+}
+
+.wd-bold-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: darkgray;
+}
+
+.wd-cog {
+  padding-left: 48px;
+}
+
+.wd-center {
+  display: flex;
+  align-items: center;
+}
+
+.wd-right-col .list-group-item {
+  background-color: #2b2b2a;
+  border: none;
+}
+
+.list-group-item .btn {
+  background-color: lightgray;
+  color: black;
+  border: none;
+}
+
+.active i {
+  color: white;
+}
