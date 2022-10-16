@@ -1,0 +1,18 @@
+.wd-bold-text {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.wd-center {
+  display: flex;
+  align-items: center;
+}
+
+.wd-text {
+  color: rgb(110, 118, 125);
+  font-size: 15px;
+}
+
+.wd-post-summary .list-group-item {
+  border: rgb(47, 51, 54) solid 1px;
+}
