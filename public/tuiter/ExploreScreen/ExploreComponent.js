@@ -29,7 +29,7 @@ const ExploreComponent = () => {
       </li>
       <li class="nav-item d-none d-md-block">
         <a class="nav-link" href="#">Entertainment</a>
-      </li>
+      </li> 
     </ul>
     
    <div class="position-relative">

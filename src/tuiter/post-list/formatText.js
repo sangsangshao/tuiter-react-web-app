@@ -1,0 +1,19 @@
+//source:https://stackoverflow.com/questions/73814215/how-to-wrap-hashtag-and-username-with-next-link
+
+export const formatText = (text) => {
+  console.log("text", text)
+  let content = text.split(/((?:#|@|https?:\/\/[^\s]+)[a-zA-Z0-9]+)/);
+  let username;
+  let linkText;
+  return content.map((word) => {
+    if (word.startsWith("@")) {
+      username = word.replace('@', '')
+      return <a href= "text-decoration-none">{word}</a >;
+    } else if (word.startsWith("http")) {
+      linkText = word.replace('http://', '').replace('https://', '')
+      return <a href={word} className="text-decoration-none">{linkText}</a >
+    } else {
+      return word;
+    }
+  });
+};
