@@ -4,7 +4,7 @@ const PostListItem = (post) => {
     <li class="list-group-item bg-black">
       <div class="row">
         <div class="col-1 mt-2">
-          <img class="rounded-circle" style="height: 30px" src=${post.avatarIcon}/>
+          <img class="rounded-circle" style="height: 30px" src="${post.avatarIcon}"/>
         </div>
   
         <div class="col-11 mt-2">
@@ -23,7 +23,7 @@ const PostListItem = (post) => {
   
 <!--            <div class="card mt-2 border-secondary bg-black wd-post">-->
           <div class="card mt-2 bg-black border-secondary" style="border-radius: 15px; overflow: hidden">
-            <img class="card-img-top border border-light" src=${post.image}/><img>
+            <img class="card-img-top border border-light" src="${post.image}"/><img>
             <div class="${post.hasContent? '': 'd-none'} card-body bg-black">
               <div class="card-title text-white m-0">${post.title}</div>
               <div class="card-text text-secondary">${post.content}</div>
