@@ -1,0 +1,29 @@
+[
+  {  "_id": 123,
+    "userName": "Java",
+    "handle": "Java",
+    "avatarIcon": "../../../images/javalogo.png"
+  },
+  {
+    "_id": 234,
+    "userName": "Relativity Space",
+    "handle": "relativityspace",
+    "avatarIcon": "../../../images/relativitySpaceLogo.jpg"
+  },
+  {  "_id": 345,
+    "userName": "Virgin Galactic",
+    "handle": "virgingalactic",
+    "avatarIcon": "../../../images/virgingalacticlogo.svg"
+  },
+  {  "_id": 456,
+    "userName": "NASA",
+    "handle": "NASA",
+    "avatarIcon": "../../../images/nasalogo.png"
+  },
+  {
+    "_id": 567,
+    "userName": "Tesla",
+    "handle": "Tesla",
+    "avatarIcon": "../../../images/teslalogo.png"
+  }
+]

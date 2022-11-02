@@ -8,6 +8,12 @@ import PostSummaryList from "./post-summary-list";
 import {Navigate} from 'react-router-dom';
 import HomeScreen from "./home/home-screen.js";
 import ExploreScreen from "./explore/explore-screen.js";
+import whoReducer from "./reducers/who-reducer";
+import tuitsReducer from "./tuits/tuits-reducer";
+import {configureStore} from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+
+const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer}});
 
 function Tuiter() {
   return (
@@ -33,12 +39,14 @@ function Tuiter() {
       //     </Routes>
       //   </div>
       // </div>
+      <Provider store={store}>
       <div>
       <Routes>
-        <Route index exact={true} element={<HomeScreen/>}/>
-        <Route path="/tuiter/explore" exact={true} element={<ExploreScreen/>}/>
+        <Route index element={<HomeScreen/>}/>
+        <Route path="/explore" element={<ExploreScreen/>}/>
       </Routes>
       </div>
+      </Provider>
   )
 }
 export default Tuiter;

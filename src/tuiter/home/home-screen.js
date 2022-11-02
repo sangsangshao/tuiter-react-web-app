@@ -7,6 +7,7 @@ import NavigationSidebar from "../navigation-sidebar/index.js";
 import TuitList from "../tuits/TuitsList.js";
 import WhatsHappening from "../home/whats-happening.js";
 import TuitListItem from "../tuits/TuitItem.js";
+import WhoToFollowListItem from "../who-to-follow-list/index.js";
 
 
 const HomeScreen = () => {
@@ -16,12 +17,13 @@ const HomeScreen = () => {
           <NavigationSidebar active="home"/>
         </div>
         <div className="col-10 col-lg-7 col-xl-6">
-          <PostList/>
-          {/*<WhatsHappening/>*/}
-          {/*<TuitList/>*/}
+          {/*<PostList/>*/}
+          <WhatsHappening/>
+          <TuitList/>
         </div>
         <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-          <PostSummaryList/>
+          {/*<PostSummaryList/>*/}
+          <WhoToFollowListItem/>
         </div>
       </div>
   );
