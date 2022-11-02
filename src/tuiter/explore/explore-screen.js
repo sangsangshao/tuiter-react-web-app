@@ -1,8 +1,8 @@
 import React from "react";
-import NavigationSidebar from "../navigation-sidebar";
-import WhoToFollowList from "../who-to-follow-list";
+import NavigationSidebar from "../navigation-sidebar/index.js";
+import WhoToFollowList from "../who-to-follow-list/index.js";
 import "./explore.css";
-import ExploreComponent from "./explore-component";
+import ExploreComponent from "./explore-component.js";
 
 const ExploreScreen = () => {
   return (

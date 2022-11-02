@@ -1,14 +1,14 @@
 import React from "react";
 import posts from './posts.json';
-import PostSummaryItem from "./post-summary-item";
+import PostSummaryItem from "./post-summary-item.js";
 
 const PostSummaryList = () => {
   return (
       <>
         <ul className="list-group wd-post-summary">
-          { posts.map(post => {
+          { posts.map((post, index) => {
             return (
-                <PostSummaryItem post={post}/>
+                <PostSummaryItem key={index} post={post}/>
             );
           })}
         </ul>

@@ -1,5 +1,5 @@
 import React from "react";
-import {formatText} from "./formatText";
+import {formatText} from "./formatText.js";
 
 const PostListItem = (
     {
@@ -54,17 +54,17 @@ const PostListItem = (
               </div>
               <div className="row mt-2">
                 <a className="col-3 text-secondary text-decoration-none" href="#">
-                  <span className="me-2"><i class="bi bi-chat"></i></span>
+                  <span className="me-2"><i className="bi bi-chat"></i></span>
                   <span className="">{post.comments}</span></a>
                 <a className="col-3 text-secondary text-decoration-none" href="#">
-                  <span className="me-2"><i class="bi bi-repeat"></i></span>
+                  <span className="me-2"><i className="bi bi-repeat"></i></span>
                   <span className="">{post.retweets}</span>
                 </a>
                 <a className="col-3 text-secondary text-decoration-none" href="#">
-                  <span className="me-2"><i class="bi bi-suit-heart"></i></span>
+                  <span className="me-2"><i className="bi bi-suit-heart"></i></span>
                   <span className="">{post.hearts}</span></a>
                 <a className="col-3 text-secondary text-decoration-none" href="#">
-                  <span className="me-2"><i class="bi bi-upload"></i></span>
+                  <span className="me-2"><i className="bi bi-upload"></i></span>
                 </a>
               </div>
             </div>
