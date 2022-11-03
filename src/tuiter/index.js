@@ -8,12 +8,16 @@ import PostSummaryList from "./post-summary-list";
 import {Navigate} from 'react-router-dom';
 import HomeScreen from "./home/home-screen.js";
 import ExploreScreen from "./explore/explore-screen.js";
-import whoReducer from "./reducers/who-reducer";
-import tuitsReducer from "./tuits/tuits-reducer";
+import whoReducer from "./reducers/who-reducer.js";
+import tuitsReducer from "./tuits/tuits-reducer.js";
+import profileReducer from "./profile/profile-reducer.js";
 import {configureStore} from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
+import ProfileComponent from "./profile/profile-component.js";
+import EditProfileComponent from "./edit-profile/index.js";
 
-const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer}});
+
+const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}});
 
 function Tuiter() {
   return (
@@ -44,6 +48,8 @@ function Tuiter() {
       <Routes>
         <Route index element={<HomeScreen/>}/>
         <Route path="/explore" element={<ExploreScreen/>}/>
+        <Route path="/profile" element={<ProfileComponent/>}/>
+        <Route path="/edit-profile" element={<EditProfileComponent/>}/>
       </Routes>
       </div>
       </Provider>
