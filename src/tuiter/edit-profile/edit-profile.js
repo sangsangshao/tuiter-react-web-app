@@ -9,7 +9,9 @@ const EditProfile = () => {
     "July", "August", "September", "October", "November", "December"];
   // const dob = new Date(profile.dateOfBirth)
   // const join = new Date(profile.dateJoined)
-  const [name, setName] = useState(profile.firstName + " " + profile.lastName);
+  // const [name, setName] = useState(profile.firstName + " " + profile.lastName);
+  const [firstName, setFirstName] = useState(profile.firstName);
+  const [lastName, setLastName] = useState(profile.lastName);
   const [bio, setBio] = useState(profile.bio);
   const [location, setLocation] = useState(profile.location);
   const [website, setWebsite] = useState('');
@@ -20,8 +22,10 @@ const EditProfile = () => {
     dispatch({
       type: 'save-profile',
       profile: {
-        firstName: name.split(' ')[0],
-        lastName: name.split(' ')[1],
+        // firstName: name.split(' ')[0],
+        // lastName: name.split(' ')[1],
+        firstName: firstName,
+        lastName: lastName,
         bio: bio,
         location: location,
         website: website,
@@ -39,7 +43,7 @@ const EditProfile = () => {
                 <h5 className="m-3" >Edit profile</h5>
               </div>
               <div className="col-2 ms-auto">
-                <Link to="/tuiter/profile" className="btn rounded-pill btn-secondary align-self-end" onClick={saveClickHandler}>Save</Link>
+                <Link to="/tuiter/profile" className="btn rounded-pill btn-dark align-self-end" onClick={saveClickHandler}>Save</Link>
               </div>
             </div>
         </div>
@@ -54,16 +58,25 @@ const EditProfile = () => {
 
         <div style={{marginTop: "80px"}}></div>
         <div className="mb-2 px-2">
-          <div className="form-control form-group rounded-3">
-            <label className="ms-3 text-secondary" htmlFor="edit-profile-name">Name</label>
-            <input className="form-control border-0" id="edit-profile-name" type="text"
-                   value={name} onChange={(event) => setName(event.target.value)}
-                   placeholder="Name"/>
+          <div className="form-control form-group rounded-2">
+            <label className="ms-3 text-secondary" htmlFor="edit-profile-firstName">First Name</label>
+            <input className="form-control border-0" id="edit-profile-firstName" type="text"
+                   value={firstName} onChange={(event) => setFirstName(event.target.value)}
+                   placeholder="FirstName"/>
+          </div>
+        </div>
+
+        <div className="mb-2 px-2">
+          <div className="form-control form-group rounded-2">
+            <label className="ms-3 text-secondary" htmlFor="edit-profile-lastName">Last Name</label>
+            <input className="form-control border-0" id="edit-profile-lastName" type="text"
+                   value={lastName} onChange={(event) => setLastName(event.target.value)}
+                   placeholder="LastName"/>
           </div>
         </div>
 
         <div className="mt-4 px-2">
-          <div className="form-control form-group rounded-3">
+          <div className="form-control form-group rounded-2">
             <label className="ms-3 text-secondary" htmlFor="edit-profile-bio">Bio</label>
             <input className="form-control border-0"
                    id="edit-profile-bio" type="text"
@@ -74,7 +87,7 @@ const EditProfile = () => {
         </div>
 
         <div className="mt-4 px-2">
-          <div className="form-control form-group rounded-3">
+          <div className="form-control form-group rounded-2">
             <label className="ms-3 text-secondary border-0"
                    htmlFor="edit-profile-location">Location</label>
             <input className="form-control border-0"
@@ -86,8 +99,8 @@ const EditProfile = () => {
         </div>
 
         <div className="mt-4 px-2">
-          <div className="form-group rounded-3">
-            <input className="form-control text-secondary p-2"
+          <div className="form-control form-group rounded-2">
+            <input className="ms-2 text-secondary border-0"
                    id="edit-profile-website" type="text"
                    value={website}
                    onChange={(event)=> setWebsite(event.target.value)}
@@ -98,7 +111,7 @@ const EditProfile = () => {
         <div className="mt-4 mb-2 px-2">
           <div className="form-group border-0" style={{border: 'none'}}>
             <div className="py-1">
-              <label className="text-secondary"
+              <label className="ms-2 text-secondary"
                      htmlFor="edit-profile-name">Birth date &#183;</label>
               <span className="text-primary"> Edit</span>
             </div>
@@ -113,9 +126,9 @@ const EditProfile = () => {
         <div>
           <div className="row d-flex align-items-center">
             <div className="col-8 d-flex align-items-center ms-2">
-              <h5 className="mt-2 text-secondary" >Switch to professional</h5>
+              <h5 className="mt-4 text-secondary" >Switch to professional</h5>
             </div>
-            <div className="col-2 ms-auto">
+            <div className="col-2 ms-auto mt-4">
               <Link to="/tuiter/profile"><i className="bi bi-chevron-right float-end me-2 text-secondary"></i></Link>
             </div>
           </div>

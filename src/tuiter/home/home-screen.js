@@ -18,6 +18,7 @@ const HomeScreen = () => {
         </div>
         <div className="col-10 col-lg-7 col-xl-6">
           {/*<PostList/>*/}
+          <h5>Home</h5>
           <WhatsHappening/>
           <TuitList/>
         </div>

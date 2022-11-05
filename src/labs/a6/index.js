@@ -7,8 +7,8 @@ import TodoItem from "./todo/todo-item";
 
 function Assignment6() {
   return (
-      <div>
-        {/*<Nav/>*/}
+      <>
+        <Nav/>
         <h1>Assignment 6</h1>
         {/*<Assignment6/>*/}
         <TodoItem/>
@@ -16,7 +16,7 @@ function Assignment6() {
         <ConditionalOutput/>
         <Styles/>
         <Classes/>
-      </div>
+      </>
   );
 }
 export default Assignment6;

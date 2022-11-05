@@ -32,7 +32,7 @@ const Profile = () => {
               <div className="position-absolute top-100 translate-middle-y d-flex justify-content-between px-4" >
                 <img className="rounded-circle text-secondary border-5" style={{"width":"135px", "height":"135px"}} src={profile.profilePicture} alt="profile"/>
 
-                <Link to="/tuiter/edit-profile" className="btn border-secondary rounded-pill align-self-end" >Edit Profile</Link>
+                <Link to="/tuiter/edit-profile" className="btn border-secondary rounded-pill align-self-end fw-bolder">Edit Profile</Link>
 
               </div>
             </div>

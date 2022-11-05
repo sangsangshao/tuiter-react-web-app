@@ -37,7 +37,7 @@ import Assignment6 from "./a6";
 function Labs() {
   return (
       <div>
-        <Nav/>
+        {/*<Nav/>*/}
         <Routes>
           <Route index
                  element={<Assignment6/>}/>
