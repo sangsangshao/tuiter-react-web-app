@@ -119,7 +119,7 @@ const EditProfile = () => {
                    id="edit-profile-name" type="text"
                    // value={months[dob.getMonth()] + " " + dob.getDate() + ", " + dob.getFullYear()}
                    onChange={(event) => setDateOfBirth(event.target.value)}
-                   placeholder="Jan 1, 2000"/>
+                   placeholder="mm/dd/yyyy"/>
           </div>
         </div>
 
