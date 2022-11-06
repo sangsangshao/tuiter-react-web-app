@@ -15,7 +15,7 @@ const PostSummaryItem = (
       <li className="list-group-item">
         <div className="row">
           <div className="col-10">
-            <div className="fw-bolder">{post.topic}</div>
+            <div className="border-secondary">{post.topic}</div>
             <div>
               <span className="fw-bolder">{post.userName} </span>
               <span><i className="bi bi-check-circle-fill"></i></span>
