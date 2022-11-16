@@ -44,7 +44,7 @@ const TuitStats = ({tuit}) => {
             ...tuit,
             disliked: !tuit.disliked,
             dislikes: tuit.disliked ? tuit.dislikes - 1 : tuit.dislikes + 1
-          }))} className="bi bi-hand-thumbs-down me-2"></i>
+          }))} className="bi bi-hand-thumbs-down me-2" style={{color: tuit.disliked ? "black": "grey"}}></i>
           {/*Dislikes: {tuit.dislikes}*/}
           {tuit.dislikes}
         </div>
