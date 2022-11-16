@@ -32,8 +32,9 @@ const TuitStats = ({tuit}) => {
         <div className="col-2 text-secondary text-decoration-none" href="#">
           <i onClick={() => dispatch(updateTuitThunk({
             ...tuit,
-            likes: tuit.likes + 1
-          }))} className="bi bi-heart-fill me-2 text-danger"></i>
+            liked: !tuit.liked,
+            likes: tuit.liked ? tuit.likes - 1 : tuit.likes + 1
+          }))} className="bi bi-heart-fill me-2" style={{color: tuit.liked ? "red": "grey"}}></i>
           {/*Likes: {tuit.likes}*/}
           {tuit.likes}
         </div>
@@ -41,7 +42,8 @@ const TuitStats = ({tuit}) => {
         <div className="col-2 text-secondary text-decoration-none" href="#">
           <i onClick={() => dispatch(updateTuitThunk({
             ...tuit,
-            dislikes: tuit.dislikes + 1
+            disliked: !tuit.disliked,
+            dislikes: tuit.disliked ? tuit.dislikes - 1 : tuit.dislikes + 1
           }))} className="bi bi-hand-thumbs-down me-2"></i>
           {/*Dislikes: {tuit.dislikes}*/}
           {tuit.dislikes}
