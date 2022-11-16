@@ -11,7 +11,7 @@ import Assignment6 from "./labs/a6/index.js";
 import Assignment7 from "./labs/a7/index.js";
 import ExploreScreen from "./tuiter/explore/explore-screen.js";
 // import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap-icons/font/bootstrap-icons.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";vices
 
 function App() {
   return(
