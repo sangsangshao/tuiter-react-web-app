@@ -67,30 +67,30 @@ const tuitsSlice = createSlice({
           }
         }
   },
-  reducers: {
-    likeTuit(state, action) {
-        const index = state
-        .findIndex(tuit =>
-          tuit._id === action.payload);
-        state[index].stats.liked = !state[index].stats.liked;
-        state[index].stats.likes = state[index].stats.liked ? state[index].stats.likes + 1 : state[index].stats.likes - 1;
-    },
-
-    deleteTuit(state, action) {
-      const index = state
-      .findIndex(tuit =>
-          tuit._id === action.payload);
-      state.splice(index, 1);
-    },
-
-    createTuit(state, action) {
-      state.unshift({
-        ...action.payload,
-        ...templateTuit,
-        _id: (new Date()).getTime(),
-      })
-    }
-  }
+  // reducers: {
+  //   likeTuit(state, action) {
+  //       const index = state
+  //       .findIndex(tuit =>
+  //         tuit._id === action.payload);
+  //       state[index].stats.liked = !state[index].stats.liked;
+  //       state[index].stats.likes = state[index].stats.liked ? state[index].stats.likes + 1 : state[index].stats.likes - 1;
+  //   },
+  //
+  //   deleteTuit(state, action) {
+  //     const index = state
+  //     .findIndex(tuit =>
+  //         tuit._id === action.payload);
+  //     state.splice(index, 1);
+  //   },
+  //
+  //   createTuit(state, action) {
+  //     state.unshift({
+  //       ...action.payload,
+  //       ...templateTuit,
+  //       _id: (new Date()).getTime(),
+  //     })
+  //   }
+  // }
 });
 
 export const {likeTuit, createTuit, deleteTuit} = tuitsSlice.actions;

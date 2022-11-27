@@ -18,8 +18,8 @@ const TuitListItem = ({tuit}) => {
           <tbody>
           <tr>
             <td className="align-text-top">
-              <img className="rounded-circle"
-                   src={tuit['logo']} style={{height: "40px"}} alt="logo"/>
+              {/*<img className="rounded-circle" src={tuit['logo']} style={{height: "40px"}} alt="logo"/>*/}
+              <img className="rounded-circle" style={{"width": "50px"}} src={`/images/${tuit.avatarIcon}`} alt="..."/>
             </td>
             <td className="ps-3" style={{width: '100%'}}>
               <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(tuit._id)}></i>
