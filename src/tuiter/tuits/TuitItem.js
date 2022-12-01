@@ -25,7 +25,7 @@ const TuitListItem = ({tuit}) => {
               <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(tuit._id)}></i>
               <span className="fw-bold">{tuit.userName}</span>
               {<i className="ms-1 bi bi-check-circle-fill text-primary"></i>}
-              <span className="ms-1 text-secondary">@{tuit.handle}</span>
+              <span className="ms-1 text-secondary">@{tuit.handle} · {tuit.time}</span>
               <div>
                 {tuit.tuit}
               </div>
