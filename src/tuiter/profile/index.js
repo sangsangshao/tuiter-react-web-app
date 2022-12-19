@@ -1,10 +1,8 @@
-import {useDispatch, useSelector} from "react-redux";
-import TuitStats from "../tuits/TuitStats";
+import {useSelector} from "react-redux";
 import React from "react";
 import {Link} from "react-router-dom";
 
 const Profile = () => {
-  const dispatch = useDispatch();
   const profile = useSelector(state => state.profile)
   const months = [ "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
@@ -72,6 +70,6 @@ const Profile = () => {
         </table>
       </li>
   )
-  }
+}
 
 export default Profile;
