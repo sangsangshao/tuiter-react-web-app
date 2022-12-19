@@ -1,37 +1,15 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-
+import {saveProfile} from "../profile/profile-reducer";
 
 const EditProfile = () => {
-  const profile = useSelector(state => state.profile);
-  const months = [ "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"];
-  // const dob = new Date(profile.dateOfBirth)
-  // const join = new Date(profile.dateJoined)
-  // const [name, setName] = useState(profile.firstName + " " + profile.lastName);
-  const [firstName, setFirstName] = useState(profile.firstName);
-  const [lastName, setLastName] = useState(profile.lastName);
-  const [bio, setBio] = useState(profile.bio);
-  const [location, setLocation] = useState(profile.location);
-  const [website, setWebsite] = useState('');
-  const [dateOfBirth, setDateOfBirth] = useState(profile.dateOfBirth);
+  const initialProfile = useSelector(state => state.profile);
+  const [curProfile, setCurProfile] = useState(initialProfile);
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
   const saveClickHandler = () => {
-    dispatch({
-      type: 'save-profile',
-      profile: {
-        // firstName: name.split(' ')[0],
-        // lastName: name.split(' ')[1],
-        firstName: firstName,
-        lastName: lastName,
-        bio: bio,
-        location: location,
-        website: website,
-        dateOfBirth: dateOfBirth,
-      }
-    })
+    dispatch(saveProfile(curProfile));
   }
 
   return (
@@ -61,7 +39,8 @@ const EditProfile = () => {
           <div className="form-control form-group rounded-2">
             <label className="ms-3 text-secondary" htmlFor="edit-profile-firstName">First Name</label>
             <input className="form-control border-0" id="edit-profile-firstName" type="text"
-                   value={firstName} onChange={(event) => setFirstName(event.target.value)}
+                   value={curProfile.firstName}
+                   onChange={(e) => setCurProfile({...curProfile, firstName: e.target.value})}
                    placeholder="FirstName"/>
           </div>
         </div>
@@ -70,7 +49,8 @@ const EditProfile = () => {
           <div className="form-control form-group rounded-2">
             <label className="ms-3 text-secondary" htmlFor="edit-profile-lastName">Last Name</label>
             <input className="form-control border-0" id="edit-profile-lastName" type="text"
-                   value={lastName} onChange={(event) => setLastName(event.target.value)}
+                   value={curProfile.lastName}
+                   onChange={(e) => setCurProfile({...curProfile, lastName: e.target.value})}
                    placeholder="LastName"/>
           </div>
         </div>
@@ -80,8 +60,8 @@ const EditProfile = () => {
             <label className="ms-3 text-secondary" htmlFor="edit-profile-bio">Bio</label>
             <input className="form-control border-0"
                    id="edit-profile-bio" type="text"
-                   value={bio}
-                   onChange={(event) => setBio(event.target.value)}
+                   value={curProfile.bio}
+                   onChange={(e) => setCurProfile({...curProfile, bio: e.target.value})}
                    placeholder="Bio"/>
           </div>
         </div>
@@ -92,8 +72,8 @@ const EditProfile = () => {
                    htmlFor="edit-profile-location">Location</label>
             <input className="form-control border-0"
                    id="edit-profile-location" type="text"
-                   value={location}
-                   onChange={(event) => setLocation(event.target.value)}
+                   value={curProfile.location}
+                   onChange={(e) => setCurProfile({...curProfile, location: e.target.value})}
                    placeholder="Location"/>
           </div>
         </div>
@@ -102,8 +82,8 @@ const EditProfile = () => {
           <div className="form-control form-group rounded-2">
             <input className="ms-2 text-secondary border-0"
                    id="edit-profile-website" type="text"
-                   value={website}
-                   onChange={(event)=> setWebsite(event.target.value)}
+                   value={curProfile.website}
+                   onChange={(e) => setCurProfile({...curProfile, website: e.target.value})}
                    placeholder="Website"/>
           </div>
         </div>
@@ -118,7 +98,7 @@ const EditProfile = () => {
             <input className="form-control text-secondary p-2"
                    id="edit-profile-name" type="text"
                    // value={months[dob.getMonth()] + " " + dob.getDate() + ", " + dob.getFullYear()}
-                   onChange={(event) => setDateOfBirth(event.target.value)}
+                   onChange={(e) => setCurProfile({...curProfile, dateOfBirth: e.target.value})}
                    placeholder="mm/dd/yyyy"/>
           </div>
         </div>
